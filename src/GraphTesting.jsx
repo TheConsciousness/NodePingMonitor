@@ -35,6 +35,7 @@ export default function App() {
                 useLast2minRef.current ? 
                 setPingHistory(prevPingHistory => [...prevPingHistory, data].slice(-120)) 
                 : setPingHistory(prevPingHistory => [...prevPingHistory, data]);
+
             })
             .catch(error => console.error('Error:', error));
         }, 1000)
